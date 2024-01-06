@@ -27,7 +27,8 @@ typedef struct tbl {
 } table_t;
 
 void print_table(table_t* tbl);
-
+void print_line(size_t size);
+void print_labled_line(size_t size);
 
 #define TABLE(x) print_table(x)
 
