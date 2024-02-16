@@ -74,7 +74,7 @@ uint32_t dns_question_parser (const char *in, uint32_t *offt, dns_msg_t *out)
     if(out == NULL)
         return -1;
     uint32_t offset = *offt;
-    dns_question_t *q = malloc(sizeof(dns_question_t));
+    dns_question_t *q = (dns_question_t *)malloc(sizeof(dns_question_t));
     
     uint32_t name_ln = 0, label_count = 0;
     q->qname = rr_name_parser(in, &offset, &q->nameln, &q->lblcount);
@@ -142,7 +142,8 @@ char *rr_name_parser (const char *in, uint32_t *offt, uint32_t *ln, uint32_t *lb
     name_ln += (lbl_count - 1);
     name_pos -= (name_ln + 1);
 
-    char *name = malloc(name_ln+1);
+    int name_buf_size = name_ln + 1;
+    char *name = (char *)malloc(name_buf_size);
 
     int name_offt = 0;
     while(in[name_pos] != 0X00)
