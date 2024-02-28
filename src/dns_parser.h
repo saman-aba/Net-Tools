@@ -107,19 +107,29 @@ struct dns_msg_{
     dns_rr_t *additional;
 };
 
+dns_msg_t *parse_dns            (const char *in,
+                                uint32_t offt);
 
-dns_msg_t *parse_dns (const char *in, uint32_t offt);
+uint32_t dns_header_parser      (const char *in,
+                                uint32_t *offt,
+                                dns_header_t *hdr);
 
-uint32_t    dns_header_parser   (const char *in, uint32_t *offt, dns_header_t *hdr);
-uint32_t    dns_question_parser (const char *in, uint32_t *offt, dns_msg_t *out);
-uint32_t    dns_answer_parser   (const char *in, uint32_t *offt, dns_msg_t *out);
-uint32_t    dns_rr_parser       (const char *in, uint32_t *offt, dns_rr_t *out);
+uint32_t dns_question_parser    (const char *in,
+                                uint32_t *offt,
+                                dns_msg_t *out);
 
-char *rr_name_parser (const char *in, uint32_t *offt, uint32_t *name_ln, uint32_t *lbl_count);
+uint32_t dns_rr_parser          (const char *in,
+                                uint32_t *offt,
+                                dns_rr_t *out);
 
-void print_dns_header   (dns_msg_t *msg);
-void print_dns_question (dns_msg_t *msg);
-void print_dns_rr       (dns_rr_t *rr);
+char *rr_name_parser            (const char *in,
+                                uint32_t *offt,
+                                uint32_t *name_ln,
+                                uint32_t *lbl_count);
+
+void print_dns_header           (dns_msg_t *msg);
+void print_dns_question         (dns_msg_t *msg);
+void print_dns_rr               (dns_rr_t *rr);
 
 
 #endif
