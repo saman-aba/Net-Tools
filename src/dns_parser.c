@@ -1,7 +1,8 @@
 #include "dns_parser.h"
 #include "gutils.h"
 #include <string.h>
-#include < Ws2tcpip.h>
+#include <arpa/inet.h>
+// #include < Ws2tcpip.h>
 
 dns_msg_t *parse_dns(const char *in, uint32_t offt)
 {

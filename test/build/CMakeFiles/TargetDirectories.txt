@@ -1,0 +1,3 @@
+/home/saman/Repo/Net-Tools/test/build/CMakeFiles/hashtable_test.dir
+/home/saman/Repo/Net-Tools/test/build/CMakeFiles/edit_cache.dir
+/home/saman/Repo/Net-Tools/test/build/CMakeFiles/rebuild_cache.dir

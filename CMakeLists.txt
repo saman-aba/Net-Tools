@@ -11,6 +11,7 @@ enable_testing()
 add_executable(DNSParser
         src/main.c
         src/dns_parser.c
+        src/tls_params.h
 #        src/test/test.c
 #        src/test/test_msg.c
 #        src/test/test_driver.c
@@ -18,7 +19,7 @@ add_executable(DNSParser
 )
 
 # add_test(NAME DNSParserTest)
- target_link_libraries(DNSParser PUBLIC wsock32 ws2_32)
+#  target_link_libraries(DNSParser PUBLIC wsock32 ws2_32)
 
 # ExternalProject_Add(<name> 
 #         PREFIX ${CMAKE_BINARY_DIR}/bin 

@@ -1,0 +1,4 @@
+/home/saman/Repo/Net-Tools/build/CMakeFiles/DNSParser.dir
+/home/saman/Repo/Net-Tools/build/CMakeFiles/test.dir
+/home/saman/Repo/Net-Tools/build/CMakeFiles/edit_cache.dir
+/home/saman/Repo/Net-Tools/build/CMakeFiles/rebuild_cache.dir
